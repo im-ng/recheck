@@ -18,6 +18,23 @@ npm run preview    # serve the built site
 Deploy `dist/` to any static host (GitHub Pages, Cloudflare Pages, Netlify) — no
 backend required.
 
+### GitHub Pages (project site)
+
+GitHub Pages serves from a subpath (`https://<user>.github.io/<repo>/`), so the
+build must set Astro's `base`. Two options:
+
+1. **Recommended — GitHub Actions:** push the included `.github/workflows/deploy.yml`.
+   It auto-detects the repo name and sets `BASE_PATH` for you. Enable Pages in the
+   repo settings → "Build and deployment" → Source: "GitHub Actions".
+2. **Manual:** build with the repo name as the base, then publish `dist/`:
+   ```bash
+   BASE_PATH=/your-repo/ npm run build
+   ```
+
+`dist/` also contains a `.nojekyll` file so GitHub's Jekyll doesn't ignore the
+underscore-prefixed `_astro/` folder. If you deploy with a custom domain or a
+user/org page (served at root `/`), build **without** `BASE_PATH`.
+
 ## Use it
 
 1. Open the page in **Chrome or Edge** for full coverage. Firefox/Safari still
