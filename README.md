@@ -1,4 +1,4 @@
-# RefurbCheck
+# recheck
 
 A **client-only** hardware validator for refurbished / second-hand laptops and MacBooks.
 Open it in a browser, run the checks, and get a condition report. **Nothing is

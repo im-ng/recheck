@@ -1,5 +1,5 @@
 name: Feature request
-about: Suggest an improvement or new test for RefurbCheck
+about: Suggest an improvement or new test for recheck
 title: "[Feature] "
 labels: enhancement
 assignees: ""
